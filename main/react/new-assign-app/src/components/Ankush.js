@@ -54,24 +54,41 @@ export default function Rishabh() {
   return (
 
   <>
-  <div className="container mb-3 ">
+  <div className='container homii'>
+  <div className='container '>
+  <div className="container  ">
   
   <br/>
-  <input type="first" id="first" name="first" value={friends.secondfriend}/>
+  <br/>
+
+  <div className='formii'>
+  <input className='p-2' type="first" id="first" name="first" value={friends.secondfriend} placeholder='Add a new Friend'/>
+  <button className="btn btn-primary" onClick={addd} >Add Friend</button>
+
   </div>
-  <button className="btn btn-primary" onClick={addd} >Add Frind</button>
-
-
+ 
+  
+  </div>
+     <div className='m-4'>
+     <br/>
+  <br/>
      <h2>Your Friend's List - </h2>
+     <hr/>
      {
         friends.map((friend,i)=>{
 
           return(
-            <h2 key={i} >  {friend.secondfriend} </h2>
+            <h2 className='list' key={i} >   {friend.secondfriend} </h2>
           
           )
         })
       }
+      </div>
+
+
+      </div>
+      </div>
   </>
+
   )
 }

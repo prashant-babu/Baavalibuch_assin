@@ -23,7 +23,7 @@ export default function Navbar() {
 
         <li>
             {
-                isAuthenticated && (<p className='m-2' > Welcome - {user.name}</p>)
+                isAuthenticated && (<p  className='uupr m-2' > Welcome - {user.name}</p>)
             }
         </li>
     
@@ -33,7 +33,7 @@ export default function Navbar() {
            isAuthenticated ? (<li><button className='btn btn-danger mx-2' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
            Log Out
          </button></li> )
-         : (<li><button className='btn btn-primary mx-2' onClick={() => loginWithRedirect()}>Log In</button></li>)
+         : (<li><button className='btn btn-primary mx-2' onClick={() => loginWithRedirect()}>LogIn / SignUp</button></li>)
 
         }
         
