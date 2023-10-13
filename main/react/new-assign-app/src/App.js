@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import Home from './components/Home'
 import './App.css';
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -9,7 +10,7 @@ function App() {
       <Navbar/>
   
      {
-       isAuthenticated && (  <p>Welcome -  {user.name}</p> )
+       isAuthenticated ? (  <p>Welcome -  {user.name}</p> ) : ( <Home/> )
      }
 
     </div>
